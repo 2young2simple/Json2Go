@@ -1,0 +1,2 @@
+node go.js
+gofmt -w json.go
