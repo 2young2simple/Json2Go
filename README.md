@@ -2,9 +2,11 @@
 nodejs编写，一个可以把 Json 自动转变为golang 结构体的小工具，可自行修改支持各种 tag 如 orm，json 
 
 # 使用
-1.拷贝json到 `source.json`文件
-2.运行json文件 `./json`
-3.结果在 `json.go`  
+0.准备环境 nodejs，go
+1.拷贝json到 `source.json`文件<br>
+2.运行json文件 `./json`<br>
+3.结果在 `json.go`<br>
+
 
 ## 例子
 输入
