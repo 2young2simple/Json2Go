@@ -48,9 +48,13 @@ function toGoName(str){
     return arr.join("");
 }
 
-function toJsonTag(key){
+function toJsonOrmTag(key){
     key = key.replace("-","_").toLowerCase()
     return "`orm:\"column("+key+")\"  json:"+"\""+key+"\"`"
+}
+function toJsonTag(key){
+    key = key.replace("-","_").toLowerCase()
+    return "`json:"+"\""+key+"\"`"
 }
 
 function toTime(){
@@ -85,8 +89,8 @@ function toStruct(name,json){
     if(isEmptyObject){
         return gObject
     }
-
-    str += toTime();
+    // orm create_time and update_time
+    // str += toTime();
     str += end;
     
     fs.appendFile("json.go",str,'utf8',function(err){  
